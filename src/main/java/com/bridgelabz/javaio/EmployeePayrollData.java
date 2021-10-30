@@ -1,18 +1,20 @@
 package com.bridgelabz.javaio;
 
 public class EmployeePayrollData {
-    int id;
-    String name;
-    double salary;
+    int employeeId;
+    String employeeName;
+    double employeeSalary;
 
-    public EmployeePayrollData(int id, String name, double salary){
-        this.id=id;
-        this.name=name;
-        this.salary=salary;
+    public EmployeePayrollData(Integer id, String name, Double salary) {
+
+        this.employeeId = id;
+        this.employeeName = name;
+        this.employeeSalary = salary;
     }
 
     @Override
     public String toString() {
-        return "EmployeePayrollData..........{" + "id =" + id + ", name ='" + name + '\'' + ", salary =" + salary + '}';
+
+        return "\nEmployee Details: \nEmployee Id: " + employeeId + "\nEmployee Name: " + employeeName + "\nEmployee Salary: " + employeeSalary;
     }
 }
