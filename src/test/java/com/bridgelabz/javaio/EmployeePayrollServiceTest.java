@@ -7,9 +7,11 @@ import org.junit.Test;
 import com.bridgelabz.javaio.EmployeePayrollService.IOService;
 
 
-public class EmployeePayrollServiceTest {
+public class EmployeePayrollServiceTest
+{
     @Test
-    public void given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries() {
+    public void given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries()
+    {
         EmployeePayrollData[] arrayOfEmployees = {
                 new EmployeePayrollData(1, "Jeff Bezos", 100000.0),
                 new EmployeePayrollData(2, "Bill Gates", 200000.0),
@@ -24,5 +26,10 @@ public class EmployeePayrollServiceTest {
         Assert.assertEquals(3, entries);
 
     }
+    @Test
+    public void givenFile_WhenRead_ShouldReturnNumberOfEntries() {
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        long entries = employeePayrollService.readDataFromFile(EmployeePayrollService.IOService.FILE_IO);
+        Assert.assertEquals(3, entries);
+    }
 }
-
